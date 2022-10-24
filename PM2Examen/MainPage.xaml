@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2Examen.MainPage">
+
+    <StackLayout Background="#f2f2f2">
+        <ScrollView>
+
+            <StackLayout Background="#f2f2f2">
+                
+        <Frame BackgroundColor="Black" Padding="5" CornerRadius="0">
+            <Label Text="Examen Movil 2 - 0184" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+        </Frame>
+
+        <Label HorizontalOptions="CenterAndExpand" TextColor="DarkGreen" FontSize="15">Imagen de sitio visitado</Label>
+        
+        <Image x:Name="img"  BackgroundColor="#fafaf7" WidthRequest="180" HeightRequest="180" Margin="30,0,30,10" HorizontalOptions="Center" Source="anadir.png">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AddImg" NumberOfTapsRequired="1"/>
+            </Image.GestureRecognizers>   
+        </Image>
+
+
+                <Label Margin="30,0,0,0" FontSize="18" TextColor="Black">Latitud</Label>
+        <Frame CornerRadius="4" Margin="30, 0, 30, 10" Padding="3">
+                    <Entry x:Name="txtlatitud" Keyboard="Numeric" Placeholder="Latitud" TextColor="Black" IsReadOnly="True"/>
+        </Frame>
+
+                <Label Margin="30,0,0,0" FontSize="18" TextColor="Black">Longitud </Label>
+        <Frame CornerRadius="4" Margin="30, 0, 30, 10" Padding="3" >
+                    <Entry x:Name="txtlongitud" Keyboard="Numeric" Placeholder="Longitud" TextColor="Black" IsReadOnly="True"/>
+        </Frame>
+
+                <Label Margin="30,0,0,0" FontSize="18" TextColor="Black">Descripción</Label>
+        <Frame CornerRadius="4" Margin="30, 0, 30, 10" Padding="3">
+                    <Editor x:Name="txtdescripcion"  Keyboard="Text" Placeholder="Descripción" HeightRequest="120" TextColor="Black"/>
+        </Frame>
+
+            <Button Text="Agregar" x:Name="btnAgregar" Margin="30,0,30,0" Background="orange" TextColor="White" Clicked="btnagregars_Clicked" CornerRadius="4"/>
+            <Button Text="Listar Sitios" x:Name="btnlistar"  Margin="30,0,30,0" Background="dodgerblue" TextColor="White" Clicked="btnlistar_Clicked" CornerRadius="4"/>
+            <Button Text="Salir" x:Name="btnSalir" Margin="30,0,30,10" Background="mediumpurple" TextColor="White" Clicked="btnsalir_Clicked" CornerRadius="4"/>
+
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>
